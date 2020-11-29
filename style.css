@@ -1,0 +1,114 @@
+body {
+  background: black;
+  font-family: American Typewriter;
+  background-image: url("forest.jpg");
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 300px;
+  padding: 15px;
+}
+
+.form .form-header {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.form .form-header > div {
+  width: calc(100% / 3);
+  color: 	#006400;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form.signup .form-header div.show-signup {
+  color: 	#3CB371;
+  cursor: pointer;
+}
+
+.form.signin .form-header div.show-signin {
+  color: 	#3CB371;
+  cursor: pointer;
+}
+
+.form.reset .form-header div.show-reset {
+  color: 	#3CB371;
+  cursor: pointer;
+}
+
+.form .form-elemetns {
+  margin-top: 15px;
+}
+
+.form .form-elements .form-element {
+  height: 50px;
+  opactiy: 1;
+  overflow: hidden;
+}
+
+.form .form-elements input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #3CB371;
+  background: white;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: #006400;
+  color: black;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.form .arrow {
+  position: absolute;
+  top: 42px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #3CB371;
+}
+
+.form.signup .arrow {
+  left: calc(calc(100% / 3) / 2);
+}
+
+.form.signin .arrow {
+  left: calc(calc(100% / 3) + calc(calc(100% / 3) / 2.6));
+}
+
+.form.reset .arrow {
+  left: calc(calc(calc(100% / 3) * 2) + calc(calc(100% / 3) / 2.8));
+}
+
+.form.signin .form-elements > div:nth-child(3) {
+  height: 0px;
+  opacity: 0;
+}
+
+.form.reset .form-elements > div:nth-child(2),
+.form.reset .form-elements > div:nth-child(3)
+{
+  height: 0px;
+  opacity: 0;
+}
